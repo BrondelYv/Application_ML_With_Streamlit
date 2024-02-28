@@ -4,16 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="eac2e075-d2c3-46e7-840d-6cd84e244319" name="Changes" comment="- Ajout fichier txt">
+    <list default="true" id="eac2e075-d2c3-46e7-840d-6cd84e244319" name="Changes" comment="- Restructuration">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app_streamlit/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app_streamlit/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/machine_learning/ML_diabetes.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Exploration/ML_diabetes.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/machine_learning/ML_vin.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Exploration/ML_vin.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/machine_learning/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/traitement_données/Etude_Diabetes.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Exploration/Etude_Diabetes.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/traitement_données/Etude_Vin.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Exploration/Etude_Vin.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/traitement_données/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Exploration/Etude_Diabetes.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Exploration/Etude_Diabetes.ipynb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,14 +22,19 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 8
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
   <component name="ProjectId" id="2czQzg3km1eN6Sw8BcygRVdjy3d" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -47,13 +45,13 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "diabetes",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "reference.idesettings.debugger.python",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -82,6 +80,7 @@
       <option name="presentableId" value="Default" />
       <updated>1709112190793</updated>
       <workItem from="1709112203807" duration="4800000" />
+      <workItem from="1709117034986" duration="6080000" />
     </task>
     <task id="LOCAL-00001" summary="- Création dossiers">
       <option name="closed" value="true" />
@@ -99,7 +98,15 @@
       <option name="project" value="LOCAL" />
       <updated>1709116005770</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="- Restructuration">
+      <option name="closed" value="true" />
+      <created>1709117112686</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1709117112686</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -108,6 +115,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="- Création dossiers" />
     <MESSAGE value="- Ajout fichier txt" />
-    <option name="LAST_COMMIT_MESSAGE" value="- Ajout fichier txt" />
+    <MESSAGE value="- Restructuration" />
+    <option name="LAST_COMMIT_MESSAGE" value="- Restructuration" />
   </component>
 </project>
