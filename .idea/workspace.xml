@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="eac2e075-d2c3-46e7-840d-6cd84e244319" name="Changes" comment="- Restructuration">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Exploration/Etude_Diabetes.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Exploration/Etude_Diabetes.ipynb" afterDir="false" />
-    </list>
+    <list default="true" id="eac2e075-d2c3-46e7-840d-6cd84e244319" name="Changes" comment="- Import et Analyse descriptive du jeux de données diabetes" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -80,7 +77,7 @@
       <option name="presentableId" value="Default" />
       <updated>1709112190793</updated>
       <workItem from="1709112203807" duration="4800000" />
-      <workItem from="1709117034986" duration="6080000" />
+      <workItem from="1709117034986" duration="6471000" />
     </task>
     <task id="LOCAL-00001" summary="- Création dossiers">
       <option name="closed" value="true" />
@@ -106,7 +103,23 @@
       <option name="project" value="LOCAL" />
       <updated>1709117112686</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="- Import et Analyse descriptive du jeux de données diabetes">
+      <option name="closed" value="true" />
+      <created>1709124848213</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1709124848213</updated>
+    </task>
+    <task id="LOCAL-00005" summary="- Import et Analyse descriptive du jeux de données diabetes">
+      <option name="closed" value="true" />
+      <created>1709124967425</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1709124967425</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -116,6 +129,7 @@
     <MESSAGE value="- Création dossiers" />
     <MESSAGE value="- Ajout fichier txt" />
     <MESSAGE value="- Restructuration" />
-    <option name="LAST_COMMIT_MESSAGE" value="- Restructuration" />
+    <MESSAGE value="- Import et Analyse descriptive du jeux de données diabetes" />
+    <option name="LAST_COMMIT_MESSAGE" value="- Import et Analyse descriptive du jeux de données diabetes" />
   </component>
 </project>
