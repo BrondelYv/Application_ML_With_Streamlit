@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="eac2e075-d2c3-46e7-840d-6cd84e244319" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/Projet-ML.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app_streamlit/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app_streamlit/app.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/diabete.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/vin.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/machine_learning/ML_diabetes.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/machine_learning/ML_vin.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/machine_learning/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modele_ml/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/requirements2.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tips.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/traitement_données/Etude_Diabetes.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/traitement_données/Etude_Vin.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/traitement_données/__init__.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Jupyter Notebook" />
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 8
+}]]></component>
+  <component name="ProjectId" id="2czQzg3km1eN6Sw8BcygRVdjy3d" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Workspace\Documents\Diginamic\Projets\Projet-ML" />
+      <recent name="C:\Users\Workspace\Documents\Diginamic\Projets\Projet-ML\app_streamlit" />
+      <recent name="C:\Users\Workspace\Documents\Diginamic\Projets\Projet-ML\traitement_données" />
+      <recent name="C:\Users\Workspace\Documents\Diginamic\Projets\Projet-ML\dataset" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-python-sdk-5a2391486177-2887949eec09-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-233.13763.11" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="eac2e075-d2c3-46e7-840d-6cd84e244319" name="Changes" comment="" />
+      <created>1709112190793</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1709112190793</updated>
+      <workItem from="1709112203807" duration="3000000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
