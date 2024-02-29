@@ -5,15 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="eac2e075-d2c3-46e7-840d-6cd84e244319" name="Changes" comment="- Ajout fichier txt">
+      <change afterPath="$PROJECT_DIR$/Exploration/Etude_Vin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Projet-ML.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Projet-ML.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app_streamlit/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app_streamlit/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/machine_learning/ML_diabetes.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Exploration/ML_diabetes.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/machine_learning/ML_vin.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Exploration/ML_vin.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/machine_learning/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/traitement_données/Etude_Diabetes.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Exploration/Etude_Diabetes.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/traitement_données/Etude_Vin.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Exploration/Etude_Vin.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/traitement_données/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Exploration/Etude_Diabetes.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Exploration/Etude_Diabetes.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Exploration/Etude_Vin.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Exploration/Etude_Vin.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,32 +30,38 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/app.py" root0="SKIP_HIGHLIGHTING" />
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 8
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
   <component name="ProjectId" id="2czQzg3km1eN6Sw8BcygRVdjy3d" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "reference.idesettings.debugger.python",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.Etude_Vin.executor&quot;: &quot;Run&quot;,
+    &quot;Python.app.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/mouganichrist/Projet-ML&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.notebooks.jupyter.connections.configuration.JupyterServerConfigurable&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Workspace\Documents\Diginamic\Projets\Projet-ML\Exploration" />
@@ -82,6 +87,9 @@
       <option name="presentableId" value="Default" />
       <updated>1709112190793</updated>
       <workItem from="1709112203807" duration="4800000" />
+      <workItem from="1709126558672" duration="3321000" />
+      <workItem from="1709130466165" duration="597000" />
+      <workItem from="1709158030841" duration="1717000" />
     </task>
     <task id="LOCAL-00001" summary="- Création dossiers">
       <option name="closed" value="true" />
@@ -109,5 +117,9 @@
     <MESSAGE value="- Création dossiers" />
     <MESSAGE value="- Ajout fichier txt" />
     <option name="LAST_COMMIT_MESSAGE" value="- Ajout fichier txt" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Projet_ML$Etude_Vin.coverage" NAME="Etude_Vin Coverage Results" MODIFIED="1709130840751" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Exploration" />
+    <SUITE FILE_PATH="coverage/Projet_ML$app.coverage" NAME="app Coverage Results" MODIFIED="1709159930067" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
