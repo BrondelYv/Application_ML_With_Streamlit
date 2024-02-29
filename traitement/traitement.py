@@ -2,6 +2,7 @@
 import pandas as pd
 import streamlit as st
 
+df = pd.read_csv("./dataset/vin.csv")
 
 # Function to calculate the number of rows and columns
 def calculate_shape(data):

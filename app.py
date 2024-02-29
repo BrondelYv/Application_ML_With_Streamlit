@@ -28,23 +28,31 @@ with tabs_1:
 
     if uploaded_file is not None:
         # Load the data
-        data = pd.read_csv(uploaded_file)
+        df = pd.read_csv(uploaded_file)
 
         # Display the raw data
         st.subheader('Aperçu des données')
-        st.write(data)
+
+        # Checkboxes to select columns for analysis
+        columns_to_keep = st.multiselect('Sélectionner les colonnes à inclure dans l\'analyse:', df.columns.tolist(), default=df.columns.tolist())
+
+        # Filter the data based on selected columns
+        df = df[columns_to_keep]
+
+        # Display the subset of data
+        st.write(df)
 
         # Calculate number of rows and columns
-        num_rows, num_cols = calculate_shape(data)
+        num_rows, num_cols = calculate_shape(df)
         st.write(f'Nombres de lignes: {num_rows}')
         st.write(f'Nombres de colonnes: {num_cols}')
 
         # Basic statistics
         st.subheader('Tableau Descriptif')
-        st.write(data.describe())
+        st.write(df.describe())
 
         # Identify column types
-        numerical_columns, string_columns = identify_column_types(data)
+        numerical_columns, string_columns = identify_column_types(df)
 
         # Display column types
         st.subheader('Types de colonnes')
@@ -52,7 +60,7 @@ with tabs_1:
         st.write('Colonnes texte:', string_columns)
 
         # Check for similar columns as the index
-        similar_columns = find_similar_columns(data)
+        similar_columns = find_similar_columns(df)
 
         # Display similar columns and allow the user to choose to drop them
         if similar_columns:
@@ -60,14 +68,22 @@ with tabs_1:
             for column in similar_columns:
                 drop_column = st.checkbox(f'Supprimer {column}')
                 if drop_column:
-                    data.drop(column, axis=1, inplace=True)
+                    df.drop(column, axis=1, inplace=True)
                     st.write(f'{column} dropped successfully!')
 
-        # Handle missing values
-        st.subheader("Constat: Vous avez des colonnes avec des valeurs manquantes")
-        data = handle_missing_values(data)
+        # Check for missing values
+        if df.isnull().sum().any():
+            st.subheader("Constat: Vous avez des colonnes avec des valeurs manquantes")
+            df = handle_missing_values(df)
+
+            # Display the updated data
+            st.subheader('Données mise à jour')
+            st.write(df)
+        else:
+            st.subheader("Constat: Pas de valeurs manquantes détecter.")
 
         # Store processed data in the shared variable
+        data = df
         processed_data = data
 
         # Display the updated data
