@@ -36,17 +36,17 @@ def descriptive_analysis(df):
         st.write(df.describe())
 
 
-def distribution_pairplot(df, selected_columns, target_column):
+def distribution_pairplot(df, selected_columns):
     if st.sidebar.checkbox("Graphique de distribution et pairplot"):
         st.write("Graphique de distribution :")
-        if target_column:
-            st.pyplot(sns.pairplot(df[selected_columns + [target_column]]).fig)
+        if selected_columns:
+            st.pyplot(sns.pairplot(df[selected_columns]).fig)
         else:
             st.write("S'il vous plait selectionnez une colonne cible pour afficher les graphiques")
 
 
 def correlation_with_target(df, target_column):
-    if st.sidebar.checkbox("Corrélation avec la cible"):
+    if st.sidebar.checkbox("Corrélations"):
         numeric_columns = df.select_dtypes(include=['float64', 'int64']).columns
         correlation_matrix = df[numeric_columns].corr()
         st.write("Matrice de corrélation :")
