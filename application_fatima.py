@@ -1,8 +1,18 @@
 #!/usr/bin/env python
 # coding: utf-8
-
 import streamlit as st
 import pandas as pd
+from sklearn.model_selection import train_test_split
+from sklearn.linear_model import LinearRegression, LogisticRegression
+from sklearn.tree import DecisionTreeClassifier
+from sklearn.svm import SVC
+from sklearn.naive_bayes import GaussianNB
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.decomposition import PCA
+from sklearn.metrics import accuracy_score, confusion_matrix
+import matplotlib.pyplot as plt
+import seaborn as sns
+
 import seaborn as sns
 from sklearn.preprocessing import StandardScaler
 from sklearn.impute import SimpleImputer
@@ -10,7 +20,7 @@ from sklearn.pipeline import Pipeline
 from sklearn.metrics import accuracy_score, classification_report
 # Importez les bibliothèques nécessaires au début de votre script
 from sklearn.model_selection import train_test_split
-from sklearn.ensemble import RandomForestClassifier
+from sklearn.ensemble import RandomForestClassifier, RandomForestRegressor
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.linear_model import LogisticRegression
 from scipy.stats import expon
@@ -19,9 +29,18 @@ from sklearn.linear_model import LinearRegression
 import numpy as np
 import matplotlib.pyplot as plt
 from scipy.stats import shapiro
+from sklearn.linear_model import LinearRegression, LogisticRegression
+from sklearn.tree import DecisionTreeClassifier
+from sklearn.svm import SVC
+from sklearn.naive_bayes import GaussianNB
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.decomposition import PCA
+from sklearn.metrics import confusion_matrix
 
+import streamlit as st
 
-from modelisation.model import train_model
+from evaluation.evaluator import evaluate_model
+from modelisation.model import train_machine_learning_model, get_user_input
 from traitement.distributions import visualize_normal_distribution, visualize_exponential_distribution
 from traitement.nettoyage import *
 
@@ -61,69 +80,53 @@ visualize_normal_distribution(df, selected_columns)
 visualize_exponential_distribution(df, selected_columns)
 
 # --------------------------------------------------------------------------
-# Étape 4: Bloc de machine learning pipeline
+# Sidebar Section: Model Training
 st.sidebar.subheader("Bloc de Machine Learning")
-# Initialisation du modèle à None
+
+# Initialization of the model to None
 model = None
 
-# Sélection du modèle
-model_selection = st.sidebar.selectbox("Sélectionnez le modèle",
-                                      ["Random Forest", "Decision Tree", "Logistic Regression"])
+# Training the model
+train_model = st.sidebar.checkbox("Entraîner le modèle")
 
-if model_selection:
-    if st.sidebar.button("Entraîner le modèle"):
-        if df is not None and selected_columns and target_column:
-            trained_model = train_model(df, selected_columns, target_column, model_selection)
-        else:
-            st.warning("Veuillez charger un fichier CSV et sélectionner les colonnes pour entraîner le modèle.")
+if train_model:
+    selected_model = st.sidebar.selectbox("Sélectionnez le modèle", [" ", "Linear Regression", "Logistic Regression",
+                                                                     "Decision Tree", "SVM", "Naive Bayes",
+                                                                     "Random Forest",
+                                                                     "Dimensionality Reduction Algorithms"])
 
+    if selected_columns and target_column:
+        X_train, X_test, y_train, y_test = train_test_split(df[selected_columns], df[target_column], test_size=0.2,
+                                                            random_state=42)
 
-def get_user_input(selected_columns):
-    user_input = {}
-    for column in selected_columns:
-        value = st.text_input(f"Entrez la valeur pour {column}:")
-        user_input[column] = value
-    return pd.DataFrame([user_input])
+        from sklearn.preprocessing import LabelEncoder
+        label_encoder = LabelEncoder()
+        y_train = label_encoder.fit_transform(y_train)
+        y_test = label_encoder.transform(y_test)
 
+    # Model Training
+    model = train_machine_learning_model(selected_model, X_train, y_train)
 
-# Prédire avec le modèle de régression linéaire
-if st.sidebar.checkbox("Prédictions avec la régression linéaire"):
-    st.write("Entrez les nouvelles données à prédire :")
-    new_data = get_user_input(selected_columns)
-    if model is not None:
-        prediction = model.predict(new_data)
-        st.write("Prédiction (Régression Linéaire) :", prediction)
-
-# Prédictions sur de nouvelles données
+# Sidebar Section: Predictions on New Data
 if st.sidebar.checkbox("Prédictions sur de nouvelles données"):
     st.write("Entrez les nouvelles données à prédire :")
-
-    # Ajoutez la fonction get_user_input pour obtenir les nouvelles données
     new_data = get_user_input(selected_columns)
 
-    if model is not None:
+    if model is not None and not isinstance(model, PCA):
         prediction = model.predict(new_data)
         st.write("Prédiction :", prediction)
-
-# In[98]:
-
+    elif isinstance(model, PCA):
+        st.warning("Impossible de faire des prédictions avec un modèle de réduction de dimension (PCA).")
+    else:
+        st.warning("Aucun modèle n'est sélectionné.")
 # -------------------------------------------------------------------------------------------------------
-# Étape 5: Bloc d'évaluation
+# Sidebar Section: Model Evaluation
 st.sidebar.subheader("Bloc d'Évaluation")
 
-# Évaluation du modèle
+# Model Evaluation
 if st.sidebar.button("Évaluer le modèle"):
-    y_pred = model.predict(X_test)
-    accuracy = accuracy_score(y_test, y_pred)
-    st.write("Précision du modèle :", accuracy)
-
-    # Matrice de confusion
-    st.write("Matrice de confusion :")
-    confusion_matrix_display = plot_confusion_matrix(model, X_test, y_test, display_labels=df[target_column].unique(),
-                                                     cmap=plt.cm.Blues, normalize='true')
-    st.pyplot(confusion_matrix_display.figure_)
-
-# In[99]:
+    if model is not None:
+        evaluate_model(model, selected_model, X_test, y_test)
 
 # ------------------------------------------------------------------------------------------------------------------------------------
 # Étape 6: Fonctionnalités supplémentaires

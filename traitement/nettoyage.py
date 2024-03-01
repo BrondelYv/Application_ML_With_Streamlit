@@ -23,7 +23,7 @@ def show_data_processing_options(df):
     st.sidebar.subheader("Étape 3: Traitement des données")
 
     if df is not None:
-        selected_columns = st.sidebar.multiselect("Sélectionnez les colonnes", df.columns)
+        selected_columns = st.sidebar.multiselect("Sélectionnez les colonnes", df.columns, key='a')
         target_column = st.sidebar.selectbox("Sélectionnez la colonne cible", df.columns)
         return selected_columns, target_column
     else:
