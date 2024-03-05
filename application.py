@@ -119,8 +119,9 @@ if train_model:
     st.sidebar.subheader("Paramètres spécifiques au modèle")
 
     if selected_model == "Linear Regression":
-        num_epochs = st.sidebar.slider("Nombre d'époques", min_value=1, max_value=100, value=10)
+        #num_epochs = st.sidebar.slider("Nombre d'époques", min_value=1, max_value=100, value=10)
         # Ajoutez d'autres paramètres spécifiques si nécessaire
+        pass
 
     elif selected_model == "Logistic Regression":
         # Ajoutez les paramètres spécifiques au modèle Logistic Regression
@@ -231,9 +232,6 @@ if st.sidebar.toggle("Comparer les modèles"):
             mse = mean_squared_error(y_test, y_pred)
             mae = mean_absolute_error(y_test, y_pred)
 
-            st.write(f"MSE : {mse:.4f}")
-            st.write(f"MAE : {mae:.4f}")
-
             # Stocker les métriques dans le tableau
             metrics_table = pd.concat([metrics_table, pd.DataFrame({"Modèle": [model_name], "MSE": [mse], "MAE": [mae]})],
                                       ignore_index=True)
@@ -243,8 +241,7 @@ if st.sidebar.toggle("Comparer les modèles"):
 
     # Enregistrer le tableau de comparaison en PDF
     # Enregistrer le message de comparaison en pdf
-    if st.button("Télécharger le rapport en PDF", key="ab"):
-        save_as_pdf(metrics_table, "rapport_resultats.pdf")
+
 
 # Afficher le tableau de comparaison
 st.write("Tableau de comparaison des modèles:")
@@ -278,6 +275,9 @@ if not metrics_table.empty:
 else:
     st.write("Le DataFrame est vide. Aucun modèle n'a été entraîné.")
 
+ # Enregistrer le message de comparaison en pdf
+if st.button("Télécharger le rapport en PDF", key="ab"):
+    save_as_pdf(metrics_table, "rapport_resultats.pdf")
 # -------------------------------------------------------------------------------------------------------
 # Étape 5: Evaluation Modele
 # Sidebar Section: Model Evaluation
