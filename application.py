@@ -18,9 +18,6 @@ from traitement.description import *
 from traitement.distributions import *
 from traitement.nettoyage import *
 
-st.title("Mon Application Streamlit")
-st.write("Bonjour depuis Streamlit!")
-
 # ----------------------------------------------------------------------------------------------------------------------
 # Étape 1: Construction de Streamlit
 st.sidebar.title("Paramètres")
@@ -77,13 +74,13 @@ st.sidebar.write("Traitements variables:")
 descriptive_analysis(df[selected_columns])
 
 # Graphique de distribution et pairplot
-distribution_pairplot(df, selected_columns, target_column)
+distribution_pairplot(df, df[selected_columns], df[target_column])
 
 # Corrélation avec la cible
-correlation_with_target(selected_columns, target_column)
+correlation_with_target(df[selected_columns], df[target_column])
 
 # Ajouté ici code standardisation
-
+standardization(df[selected_columns])
 # Ajouté ici code encodage
 
 st.sidebar.write("Traitements variable cible:")
