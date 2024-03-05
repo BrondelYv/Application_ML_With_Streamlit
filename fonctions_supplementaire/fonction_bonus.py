@@ -1,5 +1,5 @@
 # Function for Lazy Predict
-from turtle import st
+import streamlit as st
 import keras
 from keras.models import Sequential
 from keras.layers import Dense

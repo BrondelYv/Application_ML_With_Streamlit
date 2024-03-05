@@ -2,8 +2,8 @@ from turtle import st
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
-from sklearn.metrics import accuracy_score, confusion_matrix
-
+from sklearn.metrics import accuracy_score, confusion_matrix, classification_report
+import numpy as np
 from sklearn.decomposition import PCA
 import streamlit as st
 from sklearn.metrics import accuracy_score, confusion_matrix
@@ -28,11 +28,34 @@ def evaluate_model(model, selected_model, X_test, y_test):
 
                 accuracy = accuracy_score(y_test, y_pred)
                 st.write("Précision du modèle :", accuracy)
+                st.write("valeurs prédites :", model.predict(X_test))
+                st.write("vrai valeurs:", y_test)
 
                 # Confusion matrix
                 st.write("Matrice de confusion :")
                 confusion_matrix_display = sns.heatmap(confusion_matrix(y_test, y_pred), annot=True, fmt="d")
                 st.pyplot(confusion_matrix_display.figure)
+
+                # Classification report
+                st.write("Rapport de classification :")
+                classification_rep = classification_report(y_test, y_pred, output_dict=True)
+
+                # Convert classification report to DataFrame for better formatting
+                df_classification_rep = pd.DataFrame(classification_rep).transpose()
+                st.write(df_classification_rep)
+
+                # Basic interpretation of the classification report
+                st.write("Interprétation du rapport de classification :")
+                st.write("L'accuracy du modèle est :", classification_rep['accuracy'])
+
+                # Provide insights into precision, recall, and F1-score
+                for class_label, metrics in classification_rep.items():
+                    if class_label != 'accuracy':
+                        st.write(f"Classe {class_label}:")
+                        st.write(f"Precision: {metrics['precision']}")
+                        st.write(f"Recall: {metrics['recall']}")
+                        st.write(f"F1-score: {metrics['f1-score']}")
+                        st.write("\n")
         else:
             st.warning("Impossible d'évaluer un modèle de réduction de dimension (PCA) de cette manière.")
 
