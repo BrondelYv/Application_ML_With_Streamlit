@@ -1,7 +1,7 @@
 import pandas as pd
 import streamlit as st
 from reportlab.pdfgen import canvas
-#from lazypredict.Supervised import LazyClassifier
+from utils.lazyutils import LazyClassifier
 from sklearn.decomposition import PCA
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.linear_model import LinearRegression, LogisticRegression
@@ -306,7 +306,7 @@ if st.sidebar.checkbox("Prédictions sur de nouvelles données"):
 # -------------------------------------------------------------------------------------------------------
 # Étape 6: Fonctionnalités supplémentaires
 st.sidebar.subheader("Fonctionnalités Supplémentaires")
-"""
+
 # Définition de la fonction Lazy Predict
 def lazy_predict(X_train, X_test, y_train, y_test):
     # Utiliser LazyClassifier pour prédire automatiquement avec plusieurs modèles
@@ -316,7 +316,7 @@ def lazy_predict(X_train, X_test, y_train, y_test):
     # Afficher ou retourner les résultats
     st.write(models)
     #st.write(predictions)
-"""
+
 # Définition de la fonction GridSearchCV
 def grid_search_cv(X_train, y_train):
     # Créer un modèle RandomForestClassifier (exemple)
