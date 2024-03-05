@@ -10,8 +10,8 @@ from sklearn.model_selection import train_test_split, GridSearchCV
 from sklearn.naive_bayes import GaussianNB
 from sklearn.svm import SVC
 from sklearn.tree import DecisionTreeClassifier
-from tensorflow.python.keras.models import Sequential
-from tensorflow.python.layers.core import Dense
+from tensorflow.keras.models import Sequential
+from tensorflow.keras.layers import Dense
 from evaluation.evaluator import evaluate_model
 from modelisation.model import get_user_input, train_machine_learning_model
 from traitement.description import *
